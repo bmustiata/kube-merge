@@ -1,0 +1,3 @@
+NAME: py3-exe
+arg0: kube_merge
+kube_merge: true
