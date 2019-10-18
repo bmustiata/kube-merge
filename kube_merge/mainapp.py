@@ -3,7 +3,6 @@ import click
 import os
 import yaml
 from termcolor_util import red, cyan, green, yellow
-import colorama
 import sys
 
 
@@ -81,12 +80,13 @@ def write_yaml_file(file_name, content) -> None:
 @click.option("--only-users", is_flag=True)
 @click.option("--only-clusters", is_flag=True)
 def main(output_context: str,
-        contexts_to_merge: List[str],
-        validate: bool,
-        only_users: bool,
-        only_clusters: bool) -> None:
+         contexts_to_merge: List[str],
+         validate: bool,
+         only_users: bool,
+         only_clusters: bool) -> None:
     if not contexts_to_merge:
-        print(red("Paths to the contexts to be merged was not provided. Pass it as an argument."))
+        print(red("Paths to the contexts to be merged was not provided."
+                  " Pass it as an argument."))
         sys.exit(1)
 
     if only_users and only_clusters:
@@ -111,4 +111,3 @@ def main(output_context: str,
 
 if __name__ == '__main__':
     main()
-
