@@ -8,7 +8,7 @@ packages = find_packages()
 
 setup(
     name='kube_merge',
-    version='1.0.0',
+    version='0.1.master',
     description='kube_merge',
     long_description=readme,
     author='Bogdan Mustiata',
@@ -19,7 +19,11 @@ setup(
             "kube-merge = kube_merge.mainapp:main"
         ]
     },
-    install_requires=[],
+    install_requires=[
+        "click==7.0",
+        "PyYaml==5.1.2",
+        "colorama",
+        "termcolor_util"],
     packages=packages,
     package_data={
         '': ['*.txt', '*.rst']
