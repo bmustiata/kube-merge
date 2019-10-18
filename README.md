@@ -1,14 +1,6 @@
-# wut
+kube\_merge program.
 
-wut program.
+Installation
+============
 
-## Installation
-
-```sh
-pip install wut
-```
-
-```sh
-bmbzling
-```
-
+    pip install kube_merge

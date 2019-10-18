@@ -16,7 +16,7 @@ setup(
     license='BSD',
     entry_points={
         "console_scripts": [
-            "kube_merge = kube_merge.mainapp:main"
+            "kube-merge = kube_merge.mainapp:main"
         ]
     },
     install_requires=[],
