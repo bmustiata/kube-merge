@@ -75,10 +75,18 @@ def write_yaml_file(file_name, content) -> None:
 
 @click.command()
 @click.argument("contexts_to_merge", nargs=-1)
-@click.option("--validate/--no-validate", default=True)
-@click.option("--output-context", default=DEFAULT_KUBE_CONFIG)
-@click.option("--only-users", is_flag=True)
-@click.option("--only-clusters", is_flag=True)
+@click.option("--validate/--no-validate",
+              default=True,
+              help="Validates if the config was saved with --raw.")
+@click.option("--output-context",
+              default=DEFAULT_KUBE_CONFIG,
+              help=f"Specify the .kube/config filename. Defaults to {DEFAULT_KUBE_CONFIG}.")
+@click.option("--only-users",
+              is_flag=True,
+              help="Get only the users.")
+@click.option("--only-clusters",
+              is_flag=True,
+              help="Get only the clusters.")
 def main(output_context: str,
          contexts_to_merge: List[str],
          validate: bool,
