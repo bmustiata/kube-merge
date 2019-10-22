@@ -1,10 +1,8 @@
-kube_merge program.
-
-.. __installation:
+kube\_merge program.
 
 Installation
 ============
 
 .. code:: sh
 
-   pip install kube_merge
+    pip install kube_merge
