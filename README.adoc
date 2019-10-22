@@ -1,10 +1,38 @@
-# kube_merge
+= kube-merge
 
-kube_merge program.
+kube-merge allows merging other Kubernetes configurations into the current
+configuration.
 
-## Installation
+== Installation
 
 ```sh
-pip install kube_merge
+pip install kube-merge
 ```
+
+== Usage
+
+In order to merge other configs first dump the configuration to a file. For
+example if using the microk8s snap from Ubuntu, just dump the configuration to
+a file:
+
+[source,sh]
+-----------------------------------------------------------------------------
+microk8s.kubectl config view --raw > microk8s.yml
+-----------------------------------------------------------------------------
+
+then simply add it:
+
+[source,sh]
+-----------------------------------------------------------------------------
+kube-merge microk8s.yml
+-----------------------------------------------------------------------------
+
+This _will change_ the default configuration, adding the clusters and users.
+
+From there you'll just switch the context using the regular:
+
+[source,sh]
+-----------------------------------------------------------------------------
+kubectl config use-context ...
+-----------------------------------------------------------------------------
 
