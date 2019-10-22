@@ -59,7 +59,7 @@ def merge_kube_context(
     for context in new_content["contexts"]:
         print(green("Merging context"),
               green(context["name"], bold=True))
-        merged_yaml["contexts"].append(user)
+        merged_yaml["contexts"].append(context)
 
 
 def write_yaml_file(file_name, content) -> None:
