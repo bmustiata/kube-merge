@@ -1,1 +1,4 @@
-_gbs/prepare-build2/requirements.txt
+click==7.0
+PyYaml==5.4
+colorama
+termcolor_util
