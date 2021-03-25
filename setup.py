@@ -21,7 +21,7 @@ setup(
     },
     install_requires=[
         "click==7.0",
-        "PyYaml==5.1.2",
+        "PyYaml==5.4",
         "colorama",
         "termcolor_util"],
     packages=packages,
